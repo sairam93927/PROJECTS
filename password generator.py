@@ -3,8 +3,6 @@ import string
 
 def generate_password():
     print("===== Password Generator =====")
-
-    # Prompt the user for the password length
     try:
         length = int(input("Enter the desired length of the password: "))
         if length <= 0:
@@ -13,8 +11,6 @@ def generate_password():
     except ValueError:
         print("Invalid input! Please enter a number.")
         return
-
-    # Display complexity options
     print("\nSelect Password Complexity:")
     print("1. Low (Only lowercase letters)")
     print("2. Medium (Lowercase + Uppercase)")
@@ -22,8 +18,6 @@ def generate_password():
     print("4. Very High (Letters + Digits + Symbols)")
 
     complexity = input("Enter your choice (1-4): ")
-
-    # Define character sets based on complexity
     if complexity == '1':
         char_set = string.ascii_lowercase
     elif complexity == '2':
@@ -35,15 +29,9 @@ def generate_password():
     else:
         print("Invalid complexity choice! Please enter a number between 1 and 4.")
         return
-
-    # Generate password
     password = ''.join(random.choice(char_set) for _ in range(length))
-
-    # Display the generated password
     print("\nGenerated Password:")
     print(password)
-
-# Run the password generator
 if __name__ == "__main__":
     generate_password()
 

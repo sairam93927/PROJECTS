@@ -1,5 +1,5 @@
 num1 = int(input("Enter the 1st Number:"))
-num2=int(input("Enter the 2nt Number:"))
+num2=int(input("Enter the 2ndt Number:"))
 operator=input("Give operator:")
 if operator=="+":
     print(f"adiition of two numbers is {num1+num2}")

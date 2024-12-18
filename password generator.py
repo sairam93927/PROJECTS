@@ -1,44 +1,4 @@
 import random
-import string
-
-def generate_password():
-    print("===== Password Generator =====")
-    try:
-        length = int(input("Enter the desired length of the password: "))
-        if length <= 0:
-            print("Password length must be a positive number!")
-            return
-    except ValueError:
-        print("Invalid input! Please enter a number.")
-        return
-    print("\nSelect Password Complexity:")
-    print("1. Low (Only lowercase letters)")
-    print("2. Medium (Lowercase + Uppercase)")
-    print("3. High (Letters + Digits)")
-    print("4. Very High (Letters + Digits + Symbols)")
-
-    complexity = input("Enter your choice (1-4): ")
-    if complexity == '1':
-        char_set = string.ascii_lowercase
-    elif complexity == '2':
-        char_set = string.ascii_letters
-    elif complexity == '3':
-        char_set = string.ascii_letters + string.digits
-    elif complexity == '4':
-        char_set = string.ascii_letters + string.digits + string.punctuation
-    else:
-        print("Invalid complexity choice! Please enter a number between 1 and 4.")
-        return
-    password = ''.join(random.choice(char_set) for _ in range(length))
-    print("\nGenerated Password:")
-    print(password)
-if __name__ == "__main__":
-    generate_password()
-
-
-# second way to genarate a password
-
-import random
 
 letters=['A', 'B', 'C', 'D', 'E', 'F', 'G', 'H', 'I', 'J']
 numbers=['1', '2', '3', '4', '5', '6', '7', '8', '9']
